@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(echo \"EXIT_CODE=$?\")",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(tee /tmp/tsc2.log)",
+      "Bash(node -e \"const i=require\\('lucide-react-native'\\); ['Vibrate','Volume2','Bell','BarChart3','UserCircle','Sparkles','ChevronRight'].forEach\\(n=>console.log\\(n, typeof i[n]\\)\\)\")",
+      "Bash(grep -rEoh \"radius\\\\.[a-z]+\" app components | sort -u > /tmp/r.txt 2>&1; grep -rEoh \"shadow\\\\.[a-z]+\" app components | sort -u > /tmp/s.txt 2>&1; echo \"RADIUS:\"; cat /tmp/r.txt; echo \"SHADOW:\"; cat /tmp/s.txt)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const f=require\\('@expo-google-fonts/inter'\\); console.log\\('Inter_800ExtraBold:', typeof f.Inter_800ExtraBold\\)\")",
+      "Bash(EXPO_NO_TELEMETRY=1 CI=1 npx expo start --web --port 8081)",
+      "Bash(pkill -f \"expo start\")",
+      "Bash(EXPO_NO_TELEMETRY=1 CI=1 npx expo start --web --port 8081 --clear)",
+      "Bash(curl -s -m 120 -o /tmp/page.html -w '%{http_code} size=%{size_download}\\\\n' http://localhost:8081/)",
+      "Bash(curl -s -m 180 -o /tmp/bundle.js -w '%{http_code} size=%{size_download}\\\\n' \"http://localhost:8081/index.bundle?platform=web&dev=true\")",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(node -e \"console.log\\('playwright:', !!require.resolve\\('playwright'\\)\\)\")",
+      "Read(//Applications/Microsoft Edge.app/Contents/MacOS/**)",
+      "Read(//Applications/Chromium.app/Contents/MacOS/**)",
+      "Bash(npx --yes playwright@latest --version)",
+      "Bash(npx --yes playwright@latest install chromium)",
+      "Bash(PLAYWRIGHT_BROWSERS_PATH=__TRACKED_VAR__/Library/Caches/ms-playwright node /tmp/shot.mjs)",
+      "Bash(EXPO_NO_TELEMETRY=1 npx expo start --web --port 8081)",
+      "Bash(echo \"started, pid $!\")"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

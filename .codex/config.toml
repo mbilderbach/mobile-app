@@ -1,0 +1,5 @@
+[mcp_servers.refero]
+url = "https://api.refero.design/mcp"
+
+[mcp_servers.refero.http_headers]
+Authorization = "Bearer mcp-f6lamxayYARx1mpI"
